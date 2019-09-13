@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Mulya Aqiqah</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css')?>" >
-    <!-- Icon -->
-    <link rel="stylesheet" href="<?= base_url('assets/fonts/line-icons.css')?>">
-    <!-- Owl carousel -->
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css')?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.css')?>">
     
-    <!-- Animate -->
     <link rel="stylesheet" href="<?= base_url('assets/css/animate.css')?>">
-    <!-- Main Style -->
     <link rel="stylesheet" href="<?= base_url('assets/css/main.css')?>">
-    <!-- Responsive Style -->
     <link rel="stylesheet" href="<?= base_url('assets/css/responsive.css')?>">
+    <style>
+    .phone-float{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:120px;
+      left:40px;
+      background-color:#6571F7;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      font-size:30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index:100;
+      padding-top:14px
+    }
+    .wa-float{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:40px;
+      left:40px;
+      background-color:#25d366;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      font-size:30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index:100;
+      padding-top:14px
+    }
+    .map-responsive{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+    }
+    .map-responsive iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+    img.img-layanan{
+      border-radius:20px;
+      box-shadow:0px 5px 5px 3px #04040452;
+      transition:0.7s;
+    }
+    img.img-layanan:hover{
+      transition:0.7s;
+      transform:translateY(-10px);
+      box-shadow:0px 7px 15px 3px #04040452;
+    }
+    .link-ext{
+      border-radius: 10px;
+      background: #4CAF50 !important;
+      font-weight: bold !important;
+      color: #fff !important;
+      transition:0.5s background;
+    }
+    .link-ext:hover{
+      background: #48874A !important;
+      transition:0.5s background;
+    }
+    .navbar-expand-md .navbar-nav .link-ext:before{
+      background-color:transparent !important
+    }
+    </style>
 
   </head>
   <body>
-
-    <!-- Header Area wrapper Starts -->
+    <a href="tel:08113816100" class="phone-float" target="_blank" data-toggle="tooltip" data-placement="right" title="Hubungi Via Telepon">
+      <i class="lni-phone-handset text-white" data-toggle="tooltip" data-placement="right" title="Hubungi Via Telepon"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=08113816100" class="wa-float" target="_blank" data-toggle="tooltip" data-placement="right" title="Hubungi Via WhatsApp">
+      <i class="lni-whatsapp text-white" data-toggle="tooltip" data-placement="right" title="Hubungi Via WhatsApp"></i>
+    </a>
     <header id="header-wrap">
-      <!-- Navbar Start -->
       <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>       
+          <a href="<?= base_url() ?>" class="navbar-brand">
+            <img src="<?= base_url('assets/images/Logo.jpeg') ?>" alt="Mulya Aqiqah Logo" width="50">
+          </a>       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
           </button>
@@ -44,22 +110,17 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#services">
-                  Services
+                  Layanan
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#team">
-                  Team
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pricing">
-                  Pricing
+                <a class="nav-link" href="#harga">
+                  Harga
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#testimonial">
-                  Testimonial
+                  Testimoni
                 </a>
               </li>
               <li class="nav-item">
@@ -67,125 +128,84 @@
                   Contact
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link link-ext px-2 py-1 text-white" href="<?= base_url('gallery') ?>">
+                  Gallery
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <!-- Navbar End -->
 
-      <!-- Hero Area Start -->
       <div id="hero-area" class="hero-area-bg">
         <div class="container">      
           <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
               <div class="contents">
-                <h2 class="head-title">App, Business & SaaS<br>Landing Page Template</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat!</p>
+                <h2 class="head-title">IBADAH SEKALI <br> DALAM HIDUP</h2>
+                <p> <strong> Mulya Aqiqah </strong> adalah Tempat Terbaik untuk Memberikan <strong> Hadiah Terindah Untuk Buah Hati Tercinta </strong> </p>
                 <div class="header-button">
-                  <a href="#" class="btn btn-common">Download Now</i></a>
-                  <a href="#" class="btn btn-border video-popup">Learn More</i></a>
+                  <a href="#services" class="btn btn-common">Lebih Lanjut</i></a>
+                  <a href="<?= base_url('gallery') ?>" class="btn btn-border video-popup">Lihat Gallery</i></a>
                 </div>
               </div>
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
               <div class="intro-img">
-                <img class="img-fluid" src="assets/img/intro-mobile.png" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/img/intro-mobile.png') ?>" alt="Mulya Aqiqah Apps">
               </div>            
             </div>
           </div> 
         </div> 
       </div>
-      <!-- Hero Area End -->
 
     </header>
-    <!-- Header Area wrapper End -->
 
-    <!-- Services Section Start -->
     <section id="services" class="section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Layanan Kami</h2>
           <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
         <div class="row">
-          <!-- Services item -->
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
               <div class="icon">
                 <i class="lni-cog"></i>
               </div>
               <div class="services-content">
-                <h3><a href="#">Easy To Used</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+                <h3><a href="#">Menyediakan Hewan</a></h3>
+                <p>Kami Menyediakan Hewan Untuk Keperluan <strong> AQIQAH </strong> dan <strong> QURBAN </strong></p>
               </div>
             </div>
           </div>
-          <!-- Services item -->
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
               <div class="icon">
                 <i class="lni-stats-up"></i>
               </div>
               <div class="services-content">
-                <h3><a href="#">Awesome Design</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+                <h3><a href="#">Pemotongan </a></h3>
+                <p>Kami Menyediakan Pelayanan <strong> Pemotongan serta Pengulitan, Pencecahan sampai Proses Selesai </strong></p>
               </div>
             </div>
           </div>
-          <!-- Services item -->
           <div class="col-md-6 col-lg-4 col-xs-12">
             <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
               <div class="icon">
                 <i class="lni-users"></i>
               </div>
               <div class="services-content">
-                <h3><a href="#">Easy To Customize</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
-              <div class="icon">
-                <i class="lni-layers"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">UI/UX Design</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
-              <div class="icon">
-                <i class="lni-mobile"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">App Development</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
-              <div class="icon">
-                <i class="lni-rocket"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">User Friendly interface</a></h3>
-                <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+                <h3><a href="#">Catering</a></h3>
+                <p>Kami Menyediakan Layanan Catering untuk berbagai Kegiatan seperti <strong> Syukuran Hajatan & Khitanan </strong></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Services Section End -->
 
-    <!-- About Section start -->
     <div class="about-area section-padding bg-gray">
       <div class="container">
         <div class="row">
@@ -193,497 +213,171 @@
             <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
               <div>
                 <div class="site-heading">
-                  <p class="mb-3">Manage Statistics</p>
-                  <h2 class="section-title">Detailed Statistics of your Company</h2>
+                  <h2 class="section-title">AQIQAH</h2>
                 </div>
                 <div class="content">
                   <p>
                     Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio. 
                   </p>
-                  <a href="#" class="btn btn-common mt-3">Read More</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-            <img class="img-fluid" src="assets/img/about/img-1.png" alt="" >
+          <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight text-center" data-wow-delay="0.3s">
+            <img class="img-fluid img-layanan" src="<?= base_url('assets/images/kambing.jpg') ?>" alt="Aqiqah - Mulya Aqiqah" width="60%">
           </div>
         </div>
       </div>
     </div>
-    <!-- About Section End -->
 
-    <!-- Features Section Start -->
-    <section id="features" class="section-padding">
+    <div class="about-area section-padding bg-gray">
       <div class="container">
-        <div class="section-header text-center">          
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Awesome Features</h2>
-          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
         <div class="row">
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="content-left">
-              <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
-                <span class="icon">
-                  <i class="lni-rocket"></i>
-                </span>
-                <div class="text">
-                  <h4>Bootstrap 4 Based</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
-                <span class="icon">
-                  <i class="lni-laptop-phone"></i>
-                </span>
-                <div class="text">
-                  <h4>Fully Responsive</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
-                <span class="icon">
-                  <i class="lni-cog"></i>
-                </span>
-                <div class="text">
-                  <h4>HTML5, CSS3 & SASS</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-              </div>
-            </div>
+          <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight text-center" data-wow-delay="0.3s">
+            <img class="img-fluid img-layanan" src="<?= base_url('assets/images/kambing3.jpg') ?>" alt="Qurban - Mulya Aqiqah" width="60%">
           </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="show-box wow fadeInUp" data-wow-delay="0.3s">
-              <img src="assets/img/feature/intro-mobile.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-            <div class="content-right">
-              <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-                <span class="icon">
-                  <i class="lni-leaf"></i>
-                </span>
-                <div class="text">
-                  <h4>Modern Design</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+          <div class="col-lg-6 col-md-12 col-xs-12 info">
+            <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+              <div>
+                <div class="site-heading">
+                  <h2 class="section-title">QURBAN</h2>
                 </div>
-              </div>
-              <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
-                <span class="icon">
-                  <i class="lni-layers"></i>
-                </span>
-                <div class="text">
-                  <h4>Multi-purpose Template</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-              </div>
-              <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
-                <span class="icon">
-                  <i class="lni-leaf"></i>
-                </span>
-                <div class="text">
-                  <h4>Working Contact Form</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="content">
+                  <p>
+                    Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio. 
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Features Section End -->   
+    </div>
 
-    <!-- Team Section Start -->
-    <section id="team" class="section-padding bg-gray">
+    <section id="harga" class="section-padding bg-gray">
       <div class="container">
         <div class="section-header text-center">          
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Meet our team</h2>
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Daftar Harga</h2>
           <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
         <div class="row">
+
           <div class="col-lg-6 col-md-12 col-xs-12">
-            <!-- Team Item Starts -->
             <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
               <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-01.png" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/images/produk/1,5jt.jpg') ?>" alt="">
               </div>
               <div class="contetn">
                 <div class="info-text">
-                  <h3><a href="#">David Smith</a></h3>
-                  <p>Front-end Developer</p>
+                  <h3><a href="#">1 Ekor Kambing + Masak (Dua Jenis Masakan) </a></h3>
+                  <p class="font-weight-bold">Rp. 1.500.0000</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur.</p>
-                <ul class="social-icons">
-                  <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                </ul>
+                <p>1 Ekor Kambing dan Layanan Pemasakan untuk <strong>Dua Jenis Masakan</strong></p>
               </div>
             </div>
-            <!-- Team Item Ends -->
           </div>
           <div class="col-lg-6 col-md-12 col-xs-12">
-            <!-- Team Item Starts -->
-            <div class="team-item wow fadeInRight" data-wow-delay="0.4s">
+            <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
               <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-02.png" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/images/produk/3jt.jpg') ?>" alt="">
               </div>
               <div class="contetn">
                 <div class="info-text">
-                  <h3><a href="#">ERIC PETERSON</a></h3>
-                  <p>Product Designer</p>
+                  <h3><a href="#">1. Ekor Kambing + Masak + 50 Nasi Box</a></h3>
+                  <p class="font-weight-bold">Rp. 3.000.000</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur.</p>
-                <ul class="social-icons">
-                  <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                </ul>
+                <p>Isi Nasi Box : <strong> Nasi, Acar, Sambal Goreng, Kerupuk,Buah, Tisu & Kertas Doa </strong></p>
               </div>
             </div>
-            <!-- Team Item Ends -->
           </div>
           <div class="col-lg-6 col-md-12 col-xs-12">
-            <!-- Team Item Starts -->
-            <div class="team-item wow fadeInRight" data-wow-delay="0.6s">
+            <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
               <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-03.png" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/images/produk/3,6jt.jpg') ?>" alt="">
               </div>
               <div class="contetn">
                 <div class="info-text">
-                  <h3><a href="#">DURWIN BABB</a></h3>
-                  <p>Lead Designer</p>
+                  <h3><a href="#"> 1 Ekor Kambing + Masak + 80 Nasi Bok</a></h3>
+                  <p class="font-weight-bold">Rp. 3.600.000. </p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur.</p>
-                <ul class="social-icons">
-                  <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                </ul>
+                <p>Isi Nasi Box : <strong> Nasi, Acar, Sambal Goreng, Kerupuk,Buah, Tisu & Kertas Doa </strong></p>
               </div>
             </div>
-            <!-- Team Item Ends -->
           </div>
           <div class="col-lg-6 col-md-12 col-xs-12">
-            <!-- Team Item Starts -->
-            <div class="team-item wow fadeInRight" data-wow-delay="0.8s">
+            <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
               <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-04.png" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/images/produk/10pbox.jpg') ?>" alt="">
               </div>
               <div class="contetn">
                 <div class="info-text">
-                  <h3><a href="#">MARIJN OTTE</a></h3>
-                  <p>Lead Designer</p>
+                  <h3><a href="#"> Sneck Box (3 Jenis Sneck + Air mineral) </a></h3>
+                  <p class="font-weight-bold">Rp. 10.000/Box </p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur.</p>
-                <ul class="social-icons">
-                  <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                </ul>
+                <p>Isi Nasi Box : <strong> Nasi, Acar, Sambal Goreng, Kerupuk,Buah, Tisu & Kertas Doa </strong></p>
               </div>
             </div>
-            <!-- Team Item Ends -->
           </div>
+          
         </div>
       </div>
     </section>
-    <!-- Team Section End -->
-
-    <!-- Pricing section Start --> 
-    <section id="pricing" class="section-padding">
-      <div class="container">
-        <div class="section-header text-center">          
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Pricing</h2>
-          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="table wow fadeInLeft" data-wow-delay="1.2s">
-              <div class="icon-box">
-                <i class="lni-package"></i>
-              </div>
-              <div class="pricing-header">
-                <p class="price-value">$10<span> /mo</span></p>
-              </div>
-              <div class="title">
-                <h3>Pro</h3>
-              </div>
-              <ul class="description">
-                <li>1 user</li>
-                <li>10 GB storage</li>
-                <li>Email support</li>
-                <li>Lifetime updates</li>
-              </ul>
-              <button class="btn btn-common">Buy Now</button>
-            </div> 
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12 active">
-            <div class="table wow fadeInUp" id="active-tb" data-wow-delay="1.2s">
-              <div class="icon-box">
-                <i class="lni-drop"></i>
-              </div>
-              <div class="pricing-header">
-                <p class="price-value">$35<span> /mo</span></p>
-              </div>
-              <div class="title">
-                <h3>Plus</h3>
-              </div>
-              <ul class="description">
-                <li>10 user</li>
-                <li>30 GB storage</li>
-                <li>Priority email support</li>
-                <li>Lifetime updates</li>
-              </ul>
-              <button class="btn btn-common">Buy Now</button>
-           </div> 
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="table wow fadeInRight" data-wow-delay="1.2s">
-              <div class="icon-box">
-                <i class="lni-star"></i>
-              </div>
-              <div class="pricing-header">
-                <p class="price-value">$150<span> /mo</span></p>
-              </div>
-              <div class="title">
-                <h3>Premium</h3>
-              </div>
-              <ul class="description">
-                <li>Unlimited users</li>
-                <li>Unlimited storage</li>
-                <li>24/7 support</li>
-                <li>Lifetime updates</li>
-              </ul>
-              <button class="btn btn-common">Buy Now</button>
-            </div> 
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Pricing Table Section End -->
-  
-    <!-- Testimonial Section Start -->
-    <section id="testimonial" class="testimonial section-padding">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div id="testimonials" class="owl-carousel wow fadeInUp" data-wow-delay="1.2s">
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img1.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">David Smith</a></h2>
-                    <h3><a href="#">Creative Head</a></h3>
-                  </div>
-                  <div class="content">
-                    <p class="description">Praesent cursus nulla non arcu tempor, ut egestas elit tempus. In ac ex fermentum, gravida felis nec, tincidunt ligula.</p>
-                    <div class="star-icon mt-3">
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img2.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">Domeni GEsson</a></h2>
-                    <h3><a href="#">Awesome Technology co.</a></h3>
-                  </div>
-                  <div class="content">
-                    <p class="description">Praesent cursus nulla non arcu tempor, ut egestas elit tempus. In ac ex fermentum, gravida felis nec, tincidunt ligula.</p>
-                    <div class="star-icon mt-3">
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img3.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">Dommini Albert</a></h2>
-                    <h3><a href="#">Nesnal Design co.</a></h3>
-                  </div>
-                  <div class="content">
-                    <p class="description">Praesent cursus nulla non arcu tempor, ut egestas elit tempus. In ac ex fermentum, gravida felis nec, tincidunt ligula.</p>
-                    <div class="star-icon mt-3">
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img4.jpg" alt="">
-                  </div>
-                  <div class="info">
-                    <h2><a href="#">Fernanda Anaya</a></h2>
-                    <h3><a href="#">Developer</a></h3>
-                  </div>
-                  <div class="content">
-                    <p class="description">Praesent cursus nulla non arcu tempor, ut egestas elit tempus. In ac ex fermentum, gravida felis nec, tincidunt ligula.</p>
-                    <div class="star-icon mt-3">
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-filled"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                      <span><i class="lni-star-half"></i></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonial Section End -->
-
-    <!-- Call To Action Section Start -->
+    
     <section id="cta" class="section-padding">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">           
+          <div class="col-lg-8 col-md-8 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">           
             <div class="cta-text">
-              <h4>Get 30 days free trial</h4>
-              <p>Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. </p>
+              <h4>Tertarik Ingin Menghubungi Kami?</h4>
+              <p>Jika anda tertarik dan ingin menghubungi kami. Klik <strong> Hubungi Via WhatsApp<strong> untuk Menghubungi Kami Sekarang melalui Whatsapp</p>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-xs-12 text-right wow fadeInRight" data-wow-delay="0.3s">
-            </br><a href="#" class="btn btn-common">Register Now</a>
+          <div class="col-lg-4 col-md-4 col-xs-12 text-center wow fadeInRight" data-wow-delay="0.3s">
+            <a target="blank" href="https://api.whatsapp.com/send?phone=08113816100" class="btn btn-common">Hubungi Via Whatsapp</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- Call To Action Section Start -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="section-padding bg-gray">    
-      <div class="container">
-        <div class="section-header text-center">          
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Countact Us</h2>
-          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">   
-          <div class="col-lg-7 col-md-12 col-sm-12">
-            <div class="contact-block">
-              <form id="contactForm">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
-                      <div class="help-block with-errors"></div>
-                    </div>                                 
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
-                      <div class="help-block with-errors"></div>
-                    </div> 
-                  </div>
-                   <div class="col-md-12">
-                    <div class="form-group">
-                      <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group"> 
-                      <textarea class="form-control" id="message" placeholder="Your Message" rows="7" data-error="Write your message" required></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="submit-button text-left">
-                      <button class="btn btn-common" id="form-submit" type="submit">Send Message</button>
-                      <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                      <div class="clearfix"></div> 
-                    </div>
-                  </div>
-                </div>            
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-12 col-xs-12">
-            <div class="map">
-              <object style="border:0; height: 280px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer Section Start -->
     <footer id="footer" class="footer-area section-padding">
       <div class="container">
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
               <div class="widget">
-                <h3 class="footer-logo"><img src="assets/img/logo.png" alt=""></h3>
+                <h3 class="footer-logo">
+                  <img src="<?= base_url('assets/images/Logo.jpeg') ?>" alt="Logo Mulya Aqiqah" width="100%">
+                </h3>
                 <div class="textwidget">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis.</p>
                 </div>
                 <div class="social-icon">
                   <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                  <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
                   <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-                  <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Products</h3>
-              <ul class="footer-link">
-                <li><a href="#">Tracking</a></li>
-                <li><a href="#">Application</a></li>
-                <li><a href="#">Resource Planning</a></li>
-                <li><a href="#">Enterprise</a></li>           
-                <li><a href="#">Employee Management</a></li>           
-              </ul>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <h3 class="footer-titel mb-0 pb-0">Tempat Kami</h3>
+              <p class='mb-4 font-weight-bold'>Di Depan Kantor Pos Batu Phat</p>
+              <div class="map-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d496.66070991508786!2d97.0552232!3d5.217738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82a5a2b4473e1afa!2sKantor%20Pos%20Batu%20Phat!5e0!3m2!1sen!2sid!4v1568384520216!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Resources</h3>
-              <ul class="footer-link">
-                <li><a href="#">Payment Options</a></li>
-                <li><a href="#">Fee Schedule</a></li>
-                <li><a href="#">Getting Started</a></li>
-                <li><a href="#">Identity Verification</a></li>
-                <li><a href="#">Card Verification</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Contact</h3>
+              <h3 class="footer-titel">Kontak Kami</h3>
               <ul class="address">
                 <li>
-                  <a href="#"><i class="lni-map-marker"></i> 105 Madison Avenue - <br> Third Floor New York, NY 10016</a>
+                  <a href="#">
+                    <i class="lni-map-marker"></i>
+                    (Depan Kantor Pos Baru Phat) <br><br> Jalan Raya Lintas Sumatera, Panggoi, Muara Dua, Panggoi, Lhokseumawe, Kota Lhokseumawe, Aceh 24355
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><i class="lni-phone-handset"></i> P: +84 846 250 592</a>
-                </li>
-                <li>
-                  <a href="#"><i class="lni-envelope"></i> E: contact@uideck.com</a>
+                  <a href="#"><i class="lni-phone-handset"></i> 
+                    No Telp : <strong> 0813 3810 3066 </strong> <br>
+                    No. WhatsApp : <strong> 0811 3816 100 </strong>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -702,20 +396,15 @@
         </div>
       </div>   
     </footer> 
-    <!-- Footer Section End -->
 
-    <!-- Go to Top Link -->
     <a href="#" class="back-to-top">
     	<i class="lni-arrow-up"></i>
     </a>
     
-    <!-- Preloader -->
     <div id="preloader">
       <div class="loader" id="loader-1"></div>
     </div>
-    <!-- End Preloader -->
     
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="<?= base_url('assets/js/jquery-min.js')?>"></script>
     <script src="<?= base_url('assets/js/popper.min.js')?>"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
